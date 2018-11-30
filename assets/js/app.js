@@ -38,8 +38,16 @@
     video.srcObject = stream
 
     video.addEventListener('loadedmetadata', () => {
-      canvas.width = video.videoWidth      
-      canvas.height = video.videoHeight
+      if(
+        (navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) ||
+        navigator.userAgent.indexOf('Android') > 0
+      ){
+        canvas.width = window.innerWidth    
+        canvas.height = window.innerHeight  
+      }else{
+        canvas.width = video.videoWidth      
+        canvas.height = video.videoHeight  
+      }
       // https://stackoverflow.com/questions/47742208/horizontally-flipping-getusermedias-webcam-image-stream
       ctx.translate(video.videoWidth, 0)
       ctx.scale(-1, 1)

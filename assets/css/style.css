@@ -14,6 +14,7 @@ body{
 #canvas{
   background: #fff;
   display: block;
+  width: 100%;
 }
 
 .ui{
