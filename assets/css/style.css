@@ -1,0 +1,33 @@
+body{
+  overflow: hidden;
+  background: #ccc;
+}
+
+#video{
+  display: none;
+}
+
+#canvas{
+  background: #fff;
+  display: block;
+}
+
+.ui{
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn{
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  padding: 10px 0;
+  width: 120px;
+  font-size: 14px;
+  line-height: 1;
+  display: block;
+}
